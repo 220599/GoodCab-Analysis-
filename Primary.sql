@@ -74,14 +74,6 @@ JOIN dim_repeat_trip_distribution dd
 ON tt.city_id = dd.city_id
 ORDER BY `% of repeat people trips` desc, dd.city_id;
 
-
-SET SESSION wait_timeout = 300;
-SET GLOBAL max_allowed_packet = 16777216;  -- 16MB (adjust as necessary)
-SET GLOBAL net_read_timeout = 600;
-SET GLOBAL net_write_timeout = 600;
-SET GLOBAL wait_timeout = 28800;  -- 8 hours
-SET GLOBAL interactive_timeout = 28800;  -- 8 hours
-
 -- Q7
 
 WITH CTE_Targets AS (
